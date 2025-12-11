@@ -1,4 +1,4 @@
-const UNSPLASH_KEY = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
+const UNSPLASH_KEY = import.meta.env.VITE_UNSPLASH_KEY;
 
 export async function getImage(query) {
     const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=1&client_id=${UNSPLASH_KEY}`;
