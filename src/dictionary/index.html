@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary - MandarinMe</title>
+    <meta name="description" content="Web app dictionary for Mandarin Chinese words translated to English.">
+    <meta name="author" content="Erandy Ramirez">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <meta property="og:title" content="MandarinMe - Home">
+    <meta property="og:description" content="MandarinMe, web app for self-taught Mandarin Chinese learners.">
+
+    <meta property="og:url">
+    <meta property="og:image" />
+    <meta property="og:type" content="website">
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/dictionary-ui.js"></script>
+    <script type="module" src="../js/searchDictionary.mjs"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">MandarinMe</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/flashcards/index.html">Flash-cards</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/dictionary/index.html">Dictionary</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/phrase/index.html">Practice</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+
+        <h1 class="mb-4 fw-bold text-center">Dictionary</h1>
+
+        <!-- SEARCH BAR -->
+        <div class="card shadow-sm p-4 mb-4">
+            <div class="input-group">
+                <input id="searchInput" type="text" class="form-control" placeholder="Type a word…">
+                <button id="searchBtn" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+
+        <!-- RESULT -->
+        <div id="result" class="card shadow-sm border-0 p-4 mb-5 d-none">
+            <h3 id="resultHan" class="fw-bold mb-2"></h3>
+            <p id="resultPinyin" class="text-muted mb-1"></p>
+            <p id="resultDef" class="mb-3"></p>
+            <img id="dictionary-image" class="img-fluid rounded" style="max-width: 250px; height: auto;"
+                alt="related to searched word" />
+
+            <button id="addFavoriteBtn" class="btn btn-outline-success">
+                Add to Favorites
+            </button>
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <section class="card shadow-sm border-0 p-4 mb-5">
+            <h3 class="fw-bold mb-3">About MandarinMe Dictionary</h3>
+            <p>
+                The MandarinMe Dictionary is a comprehensive resource for learners of Mandarin Chinese, providing
+                accurate translations and detailed information about words and phrases. Whether you're a
+                beginner or an advanced learner, our dictionary is designed to help you expand your vocabulary
+                and improve your understanding of the language.
+            </p>
+
+            <p class="fw-semibold mt-3">Features include:</p>
+            <ul class="list-group mb-3">
+                <li class="list-group-item">Extensive word list with English translations</li>
+                <li class="list-group-item">Pinyin pronunciation guides</li>
+                <li class="list-group-item">Example sentences to illustrate usage</li>
+                <li class="list-group-item">Fast and intuitive search functionality</li>
+            </ul>
+
+            <p class="mb-0">
+                Start exploring the MandarinMe Dictionary today and take your Mandarin skills to the next level!
+            </p>
+        </section>
+
+        <!-- FAVORITES -->
+        <section>
+            <h2 class="fw-bold mb-3">Your Favorite Words</h2>
+
+            <ul id="favoritesList" class="list-group shadow-sm">
+                <!-- JS will insert items here -->
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+
+            <div class="mb-3 d-flex justify-content-center gap-4">
+                <a href="https://github.com/ErandyR" target="_blank" class="text-light">
+                    <i class="bi bi-github" style="font-size: 1.6rem;"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/erandyr/" target="_blank" class="text-light">
+                    <i class="bi bi-linkedin" style="font-size: 1.6rem;"></i>
+                </a>
+
+                <a href="https://www.facebook.com/erandy.ramirez.7" target="_blank" class="text-light">
+                    <i class="bi bi-facebook" style="font-size: 1.6rem;"></i>
+                </a>
+            </div>
+
+            <p class="mb-0">©️ <span>2025</span> Erandy Ramirez — Tlaxcala, México.</p>
+
+        </div>
+    </footer>
+</body>
+
+</html>

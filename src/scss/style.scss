@@ -1,0 +1,83 @@
+/* FLASHCARD FLIP EFFECT */
+/* Contenedor general */
+.flashcard {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    perspective: 1000px;
+    /* esencial para el 3D */
+}
+
+/* Parte interna que rota */
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+/* Cuando está volteada */
+.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+/* Las dos caras */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* Frente */
+.card-front {
+    background: white;
+    border: 2px solid #ddd;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transform: rotateY(0deg);
+}
+
+/* Carátula trasera */
+.card-back {
+    background: #f8f9fa;
+    border: 2px solid #ccc;
+    transform: rotateY(180deg);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación en hover */
+.flashcard:hover .flashcard-inner {
+    transform: scale(1.03);
+}
+
+
+/* Phrasebook extra styling */
+#phraseHan {
+    font-size: 3rem;
+}
+
+#phraseExample {
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+#playAudioBtn {
+    transition: 0.3s ease;
+}
+
+#playAudioBtn:hover {
+    transform: scale(1.05);
+}
+
+
+/* Importar bootstrap */
+@import "bootstrap/scss/bootstrap";

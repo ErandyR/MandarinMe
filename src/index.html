@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MandarinMe - Home</title>
+    <meta name="description" content="MandarinMe, web app for self-taught Mandarin Chinese learners .">
+    <meta name="author" content="Erandy Ramirez">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <meta property="og:title" content="MandarinMe - Home">
+    <meta property="og:description" content="MandarinMe, web app for self-taught Mandarin Chinese learners.">
+
+    <meta property="og:url">
+    <meta property="og:image" />
+    <meta property="og:type" content="website">
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">MandarinMe</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/flashcards/index.html">Flash-cards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/dictionary/index.html">Dictionary</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/phrase/index.html">Practice</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container py-5">
+
+        <!-- HERO -->
+        <section class="hero text-center mb-5">
+            <h1 class="mt-4">Welcome to MandarinMe</h1>
+            <p class="lead">A simple, fun and effective way to learn Mandarin from HSK1 to HSK3.</p>
+            <img src="/images/hero-large.webp" alt="Mandarin learning" class="img-fluid rounded">
+        </section>
+
+        <section class="container py-5">
+
+            <h2 class="text-center mb-5 fw-bold">Home</h2>
+
+            <div class="row g-4">
+
+                <!-- LEFT COLUMN -->
+                <div class="col-md-6">
+
+                    <!-- About MandarinMe -->
+                    <section class="card shadow-sm border-0 mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title fw-bold mb-3">About MandarinMe</h3>
+                            <p class="card-text">
+                                MandarinMe is a web application designed to support self-taught Mandarin
+                                learners through the HSK1-HSK3 levels. The platform offers structured
+                                study tools, vocabulary practice, progress tracking, sentence-building
+                                exercises, and personalized learning features to help users stay consistent
+                                and motivated on their language-learning journey.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Mandarin Chinese -->
+                    <section class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <h3 class="card-title fw-bold mb-3">Mandarin Chinese</h3>
+                            <div class="text-center">
+                                <img src="/images/chinese1.webp" alt="Mandarin Chinese"
+                                    class="img-fluid rounded shadow-sm" style="max-height: 220px; object-fit: cover;">
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="col-md-6">
+
+                    <section class="card shadow-sm border-0 h-100">
+                        <div class="card-body">
+                            <h3 class="card-title fw-bold mb-3">Features</h3>
+
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Comprehensive Vocabulary Lists</li>
+                                <li class="list-group-item">Interactive Flashcards</li>
+                                <li class="list-group-item">Progress Tracking Dashboard</li>
+                                <li class="list-group-item">Sentence-Building Exercises</li>
+                                <li class="list-group-item">Personalized Learning Paths</li>
+                                <li class="list-group-item">Regular Quizzes and Challenges</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CAROUSEL -->
+        <section id="motivational-carousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner text-center">
+                <div class="carousel-item active">
+                    <h3 class="p-5">千里之行，始于足下 — *A journey of a thousand miles begins with a single step.*</h3>
+                </div>
+                <div class="carousel-item">
+                    <h3 class="p-5">学习如逆水行舟，不进则退 — *Learning is like rowing upstream; not to advance is to drop back.*
+                    </h3>
+                </div>
+                <div class="carousel-item">
+                    <h3 class="p-5">坚持就是胜利 — *Perseverance is victory.*</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTONES A OTRAS PAGINAS -->
+        <section class="text-center">
+            <a class="btn btn-primary btn-lg m-2" href="/dictionary/index.html">Dictionary</a>
+            <a class="btn btn-success btn-lg m-2" href="/flashcards/index.html">Flashcards</a>
+            <a class="btn btn-warning btn-lg m-2" href="/phrase/index.html">Phrasebook</a>
+        </section>
+
+    </main>
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+
+            <div class="mb-3 d-flex justify-content-center gap-4">
+                <a href="https://github.com/ErandyR" target="_blank" class="text-light">
+                    <i class="bi bi-github" style="font-size: 1.6rem;"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/erandyr/" target="_blank" class="text-light">
+                    <i class="bi bi-linkedin" style="font-size: 1.6rem;"></i>
+                </a>
+
+                <a href="https://www.facebook.com/erandy.ramirez.7" target="_blank" class="text-light">
+                    <i class="bi bi-facebook" style="font-size: 1.6rem;"></i>
+                </a>
+            </div>
+
+            <p class="mb-0">©️ <span>2025</span> Erandy Ramirez — Tlaxcala, México.</p>
+
+        </div>
+    </footer>
+</body>
+
+</html>

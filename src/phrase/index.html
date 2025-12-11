@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phrases and Grammar - MandarinMe</title>
+    <meta name="description" content="Practice Mandarin Chinese phrases and grammar structures.">
+    <meta name="author" content="Erandy Ramirez">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <meta property="og:title" content="MandarinMe - Home">
+    <meta property="og:description" content="MandarinMe, web app for self-taught Mandarin Chinese learners.">
+
+    <meta property="og:url">
+    <meta property="og:image" />
+    <meta property="og:type" content="website">
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/phraseGenerator.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">MandarinMe</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/flashcards/index.html">Flash-cards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/dictionary/index.html">Dictionary</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="/phrase/index.html">Practice</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container py-5">
+        <h1 class="mb-4">Phrase Generator</h1>
+
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+
+                            <h2 class="mb-3 text-center">How to Use the Phrase Generator</h2>
+
+                            <p class="text-muted">
+                                The Phrase Generator helps you practice Mandarin with short, useful sentences
+                                based on any topic you choose. Simply enter a theme—like “travel”, “food”,
+                                “family”, or “school”—and the tool will generate three Mandarin sentences
+                                along with their pinyin and English translation.
+                            </p>
+
+                            <p class="mb-4 text-muted">
+                                Each phrase includes an audio button so you can listen to correct pronunciation.
+                                You can also save your favorite phrases to review later.
+                            </p>
+
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item">
+                                    <strong>1.</strong> Type a topic in the search box.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>2.</strong> Click <em>Generate Phrases</em>.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>3.</strong> Review the Mandarin sentences, pinyin, and translations.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>4.</strong> Tap the audio icon to hear pronunciation.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>5.</strong> Save your favorite phrases for future practice.
+                                </li>
+                            </ul>
+
+                            <div class="alert alert-info text-center mb-0">
+                                💡 <strong>Tip:</strong> Try different topics every day to build vocabulary faster!
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- INPUT -->
+        <div class="mb-3">
+            <label class="form-label">Enter a topic (e.g., food, greetings, travel):</label>
+            <input id="topicInput" type="text" class="form-control" placeholder="Type a topic…">
+        </div>
+
+        <button id="generateBtn" class="btn btn-primary mb-4">Generate Phrases</button>
+
+        <!-- RESULT LIST -->
+        <div id="results"></div>
+    </main>
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+
+            <div class="mb-3 d-flex justify-content-center gap-4">
+                <a href="https://github.com/ErandyR" target="_blank" class="text-light">
+                    <i class="bi bi-github" style="font-size: 1.6rem;"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/erandyr/" target="_blank" class="text-light">
+                    <i class="bi bi-linkedin" style="font-size: 1.6rem;"></i>
+                </a>
+
+                <a href="https://www.facebook.com/erandy.ramirez.7" target="_blank" class="text-light">
+                    <i class="bi bi-facebook" style="font-size: 1.6rem;"></i>
+                </a>
+            </div>
+
+            <p class="mb-0">©️ <span>2025</span> Erandy Ramirez — Tlaxcala, México.</p>
+
+        </div>
+    </footer>
+</body>
+
+</html>
