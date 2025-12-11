@@ -1,9 +1,8 @@
 // Módulo para buscar en CC-CEDICT JSON en el navegador.
-// Exporta loadDictionary, search, favorites helpers.
 
-// ------ Config / estado interno ------
-let DICT = null;         // array de entradas
-let DICT_MAP = null;     // optional map for exact hanzi lookup
+// Importante: llamar a loadDictionary(url) antes de search(query).
+let DICT = null;         // cargado desde JSON
+let DICT_MAP = null;   // mapa rápido para lookup por hanzi
 const FAVORITES_KEY = "mandarinme.favorites.v1";
 
 // ------ Helpers ------
@@ -12,7 +11,7 @@ function normalizeString(str) {
   return str.normalize("NFC").toLowerCase().trim();
 }
 
-// elimina dígitos de pinyin "ni3 hao3" -> "ni hao"
+
 function stripPinyinNumbers(pinyin) {
   if (!pinyin) return "";
   return pinyin.replace(/[0-9]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
@@ -23,7 +22,7 @@ function isChineseInput(q) {
   return /[\u4e00-\u9fff]/.test(q);
 }
 
-// simple ranker: exact match > startsWith > includes
+// simple ranker para coincidencias de substring
 function rankMatch(target, q) {
   if (!target) return 0;
   const t = normalizeString(target);
@@ -41,7 +40,7 @@ function entryKey(entry) {
   return `${s}__${stripPinyinNumbers(p)}`;
 }
 
-// ------ Public API ------
+// ------ Exported functions ------
 
 /**
  * Carga el diccionario JSON desde una URL pública (o ruta local)
@@ -182,6 +181,7 @@ export function addFavorite(entry) {
   return fav;
 }
 
+// remove favorite by key
 export function removeFavorite(key) {
   let fav = getFavorites();
   fav = fav.filter(f => f.key !== key);
@@ -189,6 +189,7 @@ export function removeFavorite(key) {
   return fav;
 }
 
+// clear all favorites
 export function clearFavorites() {
   saveFavorites([]);
 }
